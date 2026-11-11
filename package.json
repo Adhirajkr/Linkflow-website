@@ -1,0 +1,17 @@
+{
+  "name": "linkflow-website",
+  "version": "1.0.0",
+  "description": "LinkFlow - One connection. Everything flows.",
+  "private": true,
+  "scripts": {
+    "dev": "npx serve .",
+    "build": "echo 'Static HTML site - no build needed'",
+    "preview": "npx serve ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@vercel/analytics": "^2.0.1"
+  }
+}
