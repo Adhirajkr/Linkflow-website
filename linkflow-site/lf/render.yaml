@@ -1,7 +1,0 @@
-services:
-  - type: web
-    runtime: static
-    name: linkflow-site
-    buildCommand: npm install && npm run build
-    staticPublishPath: dist
-    # If the site lives in a subfolder of your repo, add:  rootDir: website
