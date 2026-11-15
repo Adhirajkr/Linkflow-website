@@ -1,0 +1,467 @@
+<title>LinkFlow</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="LinkFlow connects your Android phone and Windows PC. Share files, sync your clipboard, mirror screens, use your phone as a trackpad and more. For Windows 10, Windows 11 and Android.">
+<meta name="theme-color" content="#080E19">
+<meta property="og:type" content="website">
+<meta property="og:title" content="LinkFlow: Your Devices. Seamlessly Connected.">
+<meta property="og:description" content="Connect your Android phone and Windows PC. Share files, sync your clipboard, mirror screens and control your computer.">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop stop-color='%2316B8D0'/%3E%3Cstop offset='1' stop-color='%2322B7A5'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='48' height='48' rx='12' fill='%23080E19'/%3E%3Cg transform='rotate(-45 24 24)' fill='none' stroke='url(%23g)' stroke-width='4.6' stroke-linecap='round'%3E%3Crect x='7' y='17' width='23' height='14' rx='7'/%3E%3Crect x='18' y='17' width='23' height='14' rx='7'/%3E%3C/g%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=JetBrains+Mono:wght@500&family=Sora:wght@500;600;700&display=swap">
+<style>/*CSS*/</style>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#16B8D0"/><stop offset="1" stop-color="#22B7A5"/></linearGradient></defs>
+  <symbol id="logo-mark" viewBox="0 0 48 48"><g transform="rotate(-45 24 24)" fill="none" stroke="url(#lg)" stroke-width="4.6" stroke-linecap="round"><rect x="7" y="17" width="23" height="14" rx="7"/><rect x="18" y="17" width="23" height="14" rx="7"/></g></symbol>
+</svg>
+
+<canvas id="stage" aria-hidden="true"></canvas>
+
+<header class="nav">
+  <div class="nav-bar">
+    <a class="brand" href="#home" aria-label="LinkFlow home"><svg aria-hidden="true"><use href="#logo-mark"/></svg>LinkFlow</a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#home" data-nav="home">Home</a><a href="#features" data-nav="features">Features</a><a href="#how" data-nav="how">How It Works</a><a href="#download" data-nav="download">Download</a>
+    </nav>
+    <div class="nav-actions">
+      <a class="icon-btn" data-gh href="#github" aria-label="LinkFlow on GitHub"><i data-i="github"></i></a>
+      <a class="btn primary sm" href="#download">Download LinkFlow</a>
+      <button class="icon-btn" id="menu-btn" aria-expanded="false" aria-controls="menu" aria-label="Open menu"><i data-i="menu"></i></button>
+    </div>
+  </div>
+  <nav class="menu" id="menu" aria-label="Mobile">
+    <a href="#home" data-nav="home">Home</a><a href="#features" data-nav="features">Features</a><a href="#how" data-nav="how">How It Works</a><a href="#download" data-nav="download">Download</a>
+    <a data-gh href="#github"><i data-i="github"></i>GitHub</a>
+    <a class="btn primary" href="#download">Download LinkFlow</a>
+  </nav>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="wrap">
+      <div class="reveal">
+        <span class="eyebrow"><i data-i="zap"></i>Android + Windows, linked</span>
+        <h1>Your Devices. <span class="grad">One Seamless Connection.</span></h1>
+        <p class="lede">Connect your Android phone and Windows PC. Share files, sync your clipboard, mirror screens, control your computer, and do more — all through LinkFlow.</p>
+        <div class="btn-row">
+          <a class="btn primary" href="#download"><i data-i="windows"></i>Download for Windows</a>
+          <a class="btn" href="#download"><i data-i="android"></i>Download for Android</a>
+          <a class="btn" href="#features">Explore Features<i data-i="down"></i></a>
+        </div>
+        <div class="plat"><span><i data-i="check"></i>Windows 10</span><span><i data-i="check"></i>Windows 11</span><span><i data-i="check"></i>Android</span></div>
+      </div>
+      <div class="stage hero-stage" data-stage="hero" role="img" aria-label="3D illustration of a Windows laptop and an Android phone linked by a glowing connection"></div>
+    </div>
+    <a class="scroll-cue" href="#connect" aria-label="Scroll to the connection demo">Scroll<i></i></a>
+  </section>
+
+  <!-- LIVE CONNECTION (scroll driven) -->
+  <section class="scrub" id="connect" data-scrub aria-labelledby="connect-h">
+    <div class="sticky">
+      <div class="wrap">
+        <div>
+          <span class="eyebrow"><i data-i="wifi"></i>Live connection</span>
+          <h2 id="connect-h">One Connection. <span class="grad">Everything Connected.</span></h2>
+          <ol class="cap" aria-label="Connection sequence">
+            <li><i></i>Your Android phone arrives.</li>
+            <li><i></i>Your Windows PC wakes up.</li>
+            <li><i></i>A 4-digit PIN appears. The phone enters it.</li>
+            <li><i></i>The two devices pair.</li>
+            <li><i></i>A glowing link joins them.</li>
+            <li class="last"><i></i>Status: Connected.</li>
+            <li class="last"><i></i>Every feature switches on.</li>
+          </ol>
+          <div class="progress" aria-hidden="true"><b></b></div>
+          <p class="note">Scroll to play the sequence. It is a visual demonstration only; this website never connects to your real devices.</p>
+        </div>
+        <div class="stage" data-stage="connect" role="img" aria-label="Animated 3D sequence of a phone pairing with a Windows PC, ending in a Connected status"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section id="features" class="features-intro">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="eyebrow"><i data-i="grid"></i>Features</span>
+        <h2>Everything your phone and PC can do <span class="grad">together.</span></h2>
+        <p>Each feature below plays out on a 3D model of the two devices. The animations illustrate how a feature works. Features that are still being built are clearly marked.</p>
+      </div>
+    </div>
+
+    <article class="chapter" id="pairing">
+      <div class="wrap">
+        <div class="copy reveal">
+          <span class="eyebrow"><i data-i="lock"></i>Fast device pairing</span>
+          <h3>Connect in Seconds.</h3>
+          <p class="lead">Pair your Android phone and Windows PC quickly and securely with a 4-digit PIN.</p>
+          <ul class="ticks">
+            <li><i data-i="check"></i>Quick PIN pairing: your PC shows a 4-digit PIN, you enter it on your phone.</li>
+            <li><i data-i="check"></i>Secure device pairing between your own devices.</li>
+            <li><i data-i="check"></i>Automatic reconnection after you've paired once.</li>
+          </ul>
+          <div class="tags"><span class="pill ok">Available</span></div>
+        </div>
+        <div class="stage" data-stage="pairing" role="img" aria-label="3D illustration of a phone entering a 4-digit PIN shown on a PC, then both showing connected"></div>
+      </div>
+    </article>
+
+    <article class="chapter flip" id="clipboard">
+      <div class="wrap">
+        <div class="copy reveal">
+          <span class="eyebrow"><i data-i="clip"></i>Clipboard synchronization</span>
+          <h3>Copy Here. Paste Anywhere.</h3>
+          <p class="lead">Synchronize clipboard content between your Android phone and Windows PC.</p>
+          <ul class="ticks">
+            <li><i data-i="check"></i>Bidirectional: copy on Windows, paste on Android, and the other way around.</li>
+            <li><i data-i="check"></i>Text and clipboard previews on both devices.</li>
+            <li><i data-i="check"></i>Travels over your existing LinkFlow connection.</li>
+          </ul>
+          <div class="tags"><span class="pill ok">Available</span></div>
+        </div>
+        <div class="stage" data-stage="clipboard" role="img" aria-label="3D illustration of copied text travelling from a PC to a phone and back"></div>
+      </div>
+    </article>
+
+    <article class="chapter" id="files">
+      <div class="wrap">
+        <div class="copy reveal">
+          <span class="eyebrow"><i data-i="file"></i>File sharing</span>
+          <h3>Your Files. Everywhere.</h3>
+          <p class="lead">Transfer files between your phone and PC through your connected devices.</p>
+          <ul class="ticks">
+            <li><i data-i="check"></i>PC to phone and phone to PC.</li>
+            <li><i data-i="check"></i>A live progress indicator for every transfer.</li>
+            <li><i data-i="check"></i>Clear confirmation when a transfer completes.</li>
+          </ul>
+          <div class="tags"><span class="pill ok">Available</span></div>
+        </div>
+        <div class="stage" data-stage="files" role="img" aria-label="3D illustration of files moving between a PC and a phone with a progress bar"></div>
+      </div>
+    </article>
+
+    <article class="chapter flip" id="camera">
+      <div class="wrap">
+        <div class="copy reveal">
+          <span class="eyebrow"><i data-i="camera"></i>Phone camera sharing</span>
+          <h3>Your Phone Camera. On Your PC.</h3>
+          <p class="lead">Use your Android phone camera as a camera source on your Windows computer.</p>
+          <ul class="ticks">
+            <li><i data-i="check"></i>Share the phone camera with your PC.</li>
+            <li><i data-i="check"></i>See a live camera preview on the computer.</li>
+            <li><i data-i="check"></i>A simple phone-to-PC camera workflow.</li>
+          </ul>
+          <div class="tags"><span class="pill ok">Available</span></div>
+        </div>
+        <div class="stage" data-stage="camera" role="img" aria-label="3D illustration of a phone camera feed appearing live on a PC screen"></div>
+      </div>
+    </article>
+
+    <article class="chapter" id="screen" data-mode="0">
+      <div class="wrap">
+        <div class="copy reveal">
+          <span class="eyebrow"><i data-i="screen"></i>Screen sharing</span>
+          <h3>Your Screens. Connected.</h3>
+          <div class="tabs" role="tablist" data-modes="screen" aria-label="Screen sharing modes">
+            <button role="tab" id="tab-screen-0" aria-controls="panel-screen-0"><i data-i="phone"></i>Phone to PC</button>
+            <button role="tab" id="tab-screen-1" aria-controls="panel-screen-1"><i data-i="pc"></i>PC to Phone</button>
+            <button role="tab" id="tab-screen-2" aria-controls="panel-screen-2"><i data-i="screen"></i>Second screen</button>
+          </div>
+          <div class="mode-panel" role="tabpanel" id="panel-screen-0" aria-labelledby="tab-screen-0" data-mode-panel="screen">
+            <h4>Phone to PC: fast QR code mirror</h4>
+            <p>Scan the code on your PC with your phone and the phone screen appears inside a window on Windows. This mode uses wireless debugging (ADB over Wi-Fi) where required.</p>
+          </div>
+          <div class="mode-panel" role="tabpanel" id="panel-screen-1" aria-labelledby="tab-screen-1" data-mode-panel="screen" hidden>
+            <h4>PC to Phone</h4>
+            <p>Stream your Windows desktop to your phone and see the PC screen right inside the phone.</p>
+          </div>
+          <div class="mode-panel" role="tabpanel" id="panel-screen-2" aria-labelledby="tab-screen-2" data-mode-panel="screen" hidden>
+            <h4>Phone as a second screen</h4>
+            <p>Extended display: your phone acts as an additional display for Windows, so you can drag a window from your main monitor onto the phone.</p>
+          </div>
+          <div class="tags"><span class="pill ok">Available</span></div>
+        </div>
+        <div class="stage" data-stage="screen" role="img" aria-label="3D illustration of three screen sharing modes between a PC and a phone"></div>
+      </div>
+    </article>
+
+    <article class="chapter flip" id="audio" data-mode="0">
+      <div class="wrap">
+        <div class="copy reveal">
+          <span class="eyebrow"><i data-i="audio"></i>Audio &amp; microphone</span>
+          <h3>Audio Without Boundaries.</h3>
+          <div class="tabs" role="tablist" data-modes="audio" aria-label="Audio routing modes">
+            <button role="tab" id="tab-audio-0" aria-controls="panel-audio-0"><i data-i="phone"></i>Phone as speaker</button>
+            <button role="tab" id="tab-audio-1" aria-controls="panel-audio-1"><i data-i="mic"></i>Phone as mic</button>
+            <button role="tab" id="tab-audio-2" aria-controls="panel-audio-2"><i data-i="pc"></i>PC as speaker</button>
+          </div>
+          <div class="mode-panel" role="tabpanel" id="panel-audio-0" aria-labelledby="tab-audio-0" data-mode-panel="audio">
+            <h4>Phone as speaker</h4><p>Windows audio is routed to your Android phone.</p><div class="tags"><span class="pill ok">Available</span></div>
+          </div>
+          <div class="mode-panel" role="tabpanel" id="panel-audio-1" aria-labelledby="tab-audio-1" data-mode-panel="audio" hidden>
+            <h4>Phone as microphone</h4><p>Your Android phone microphone is used as an input on Windows.</p>
+            <div class="callout dev"><i data-i="info"></i><span><b>In development.</b> Phone as microphone isn't available yet. The animation shows what the feature is designed to do.</span></div>
+            <div class="tags"><span class="pill dev">In Development</span></div>
+          </div>
+          <div class="mode-panel" role="tabpanel" id="panel-audio-2" aria-labelledby="tab-audio-2" data-mode-panel="audio" hidden>
+            <h4>PC as speaker</h4><p>Audio from your phone plays through your PC speakers.</p><div class="tags"><span class="pill ok">Available</span></div>
+          </div>
+        </div>
+        <div class="stage" data-stage="audio" role="img" aria-label="3D illustration of sound waves routed between a PC and a phone, marked in development"></div>
+      </div>
+    </article>
+
+    <article class="chapter" id="usb">
+      <div class="wrap">
+        <div class="copy reveal">
+          <span class="eyebrow"><i data-i="usb"></i>USB mode</span>
+          <h3>Go Wired. Get Connected.</h3>
+          <p class="lead">Explore USB connectivity for a wired connection between your Android phone and Windows PC.</p>
+          <div class="callout dev"><i data-i="info"></i><span><b>In development.</b> USB mode isn't functional yet. The animation previews the planned wired experience.</span></div>
+          <div class="tags"><span class="pill dev">In Development</span></div>
+        </div>
+        <div class="stage" data-stage="usb" role="img" aria-label="3D illustration of a USB cable joining a phone and a PC, marked in development"></div>
+      </div>
+    </article>
+
+    <article class="chapter flip" id="trackpad">
+      <div class="wrap">
+        <div class="copy reveal">
+          <span class="eyebrow"><i data-i="pad"></i>Phone as trackpad</span>
+          <h3>Control Your PC From Your Phone.</h3>
+          <p class="lead">Turn your Android smartphone into a wireless trackpad for Windows.</p>
+          <ul class="ticks">
+            <li><i data-i="check"></i>Move the cursor with your finger.</li>
+            <li><i data-i="check"></i>Tap to click.</li>
+            <li><i data-i="check"></i>Scroll with touch gestures.</li>
+          </ul>
+          <div class="tags"><span class="pill ok">Available</span></div>
+        </div>
+        <div class="stage" data-stage="trackpad" role="img" aria-label="3D illustration of a phone used as a trackpad moving a cursor on a PC"></div>
+      </div>
+    </article>
+
+    <article class="chapter sticky-stage" id="controller" data-mode="0">
+      <div class="wrap">
+        <div class="copy reveal">
+          <span class="eyebrow"><i data-i="gamepad"></i>Controller</span>
+          <h3>Your Phone. Your Controller.</h3>
+          <p class="lead">Use your Android phone as a virtual controller for your Windows PC, with haptic feedback and gyro.</p>
+          <ul class="ticks">
+            <li><i data-i="check"></i>Haptic feedback as you press.</li>
+            <li><i data-i="check"></i>Gyro: tilt your phone to steer or aim.</li>
+            <li><i data-i="check"></i>Eight layouts, including your own.</li>
+          </ul>
+          <div class="tabs many" role="tablist" data-modes="controller" aria-label="Controller presets"><button role="tab" id="tab-controller-0" aria-controls="panel-controller-0">Xbox</button><button role="tab" id="tab-controller-1" aria-controls="panel-controller-1">PS5</button><button role="tab" id="tab-controller-2" aria-controls="panel-controller-2">Racing</button><button role="tab" id="tab-controller-3" aria-controls="panel-controller-3">FPS</button><button role="tab" id="tab-controller-4" aria-controls="panel-controller-4">Fight</button><button role="tab" id="tab-controller-5" aria-controls="panel-controller-5">Keyboard &amp; Mouse</button><button role="tab" id="tab-controller-6" aria-controls="panel-controller-6">Media</button><button role="tab" id="tab-controller-7" aria-controls="panel-controller-7">Customise</button></div>
+          <div class="mode-panel" role="tabpanel" id="panel-controller-0" aria-labelledby="tab-controller-0" data-mode-panel="controller"><h4>Xbox layout</h4><p>Twin sticks, D-pad, A/B/X/Y buttons, bumpers and triggers.</p></div><div class="mode-panel" role="tabpanel" id="panel-controller-1" aria-labelledby="tab-controller-1" data-mode-panel="controller" hidden><h4>PS5 layout</h4><p>PlayStation-style face buttons, sticks, D-pad and shoulder buttons.</p></div><div class="mode-panel" role="tabpanel" id="panel-controller-2" aria-labelledby="tab-controller-2" data-mode-panel="controller" hidden><h4>Racing controller</h4><p>Tilt your phone to steer, with gas and brake pedals and shift paddles.</p></div><div class="mode-panel" role="tabpanel" id="panel-controller-3" aria-labelledby="tab-controller-3" data-mode-panel="controller" hidden><h4>FPS controller</h4><p>A movement stick, a look area, and fire, aim, jump, reload and crouch buttons.</p></div><div class="mode-panel" role="tabpanel" id="panel-controller-4" aria-labelledby="tab-controller-4" data-mode-panel="controller" hidden><h4>Fight controller</h4><p>A D-pad with six attack buttons plus special and guard.</p></div><div class="mode-panel" role="tabpanel" id="panel-controller-5" aria-labelledby="tab-controller-5" data-mode-panel="controller" hidden><h4>Keyboard and mouse</h4><p>WASD and common keys with a mouse pad and click buttons.</p></div><div class="mode-panel" role="tabpanel" id="panel-controller-6" aria-labelledby="tab-controller-6" data-mode-panel="controller" hidden><h4>Media controller</h4><p>Play, pause, skip, volume and seek for whatever is playing on your PC.</p></div><div class="mode-panel" role="tabpanel" id="panel-controller-7" aria-labelledby="tab-controller-7" data-mode-panel="controller" hidden><h4>Customise</h4><p>Build your own layout: add buttons, move them around and save the result.</p></div>
+          <div class="tags"><span class="pill ok">Available</span></div>
+        </div>
+        <div class="stage" data-stage="controller" role="img" aria-label="3D illustration of a phone used as a game controller, with preset layouts, linked to a PC"></div>
+      </div>
+    </article>
+
+    <article class="chapter flip" id="autotype">
+      <div class="wrap">
+        <div class="copy reveal">
+          <span class="eyebrow"><i data-i="type"></i>Autotype</span>
+          <h3>Write It Once. Autotype It Anywhere.</h3>
+          <p class="lead">Write or paste your text in LinkFlow and let Autotype type it into any window on your Windows PC.</p>
+          <ul class="ticks">
+            <li><i data-i="check"></i>A dedicated space to write your text.</li>
+            <li><i data-i="check"></i>Types automatically wherever you choose.</li>
+            <li><i data-i="check"></i>Start, pause and stop from your phone.</li>
+          </ul>
+          <div class="tags"><span class="pill ok">Available</span></div>
+        </div>
+        <div class="stage" data-stage="autotype" role="img" aria-label="3D illustration of text written on a phone being typed into a window on a PC"></div>
+      </div>
+    </article>
+
+    <article class="chapter wide" id="customize">
+      <div class="wrap">
+        <div class="copy reveal">
+          <span class="eyebrow"><i data-i="palette"></i>Personalize LinkFlow</span>
+          <h3>Make LinkFlow Yours.</h3>
+          <p class="lead">LinkFlow has two themes. Pick a colour on the wheel and watch the apps change instantly. Try it below.</p>
+          <div class="pal" id="personalize">
+            <div class="seg" role="group" aria-label="Theme">
+              <button type="button" data-theme-mode="dark" aria-pressed="false">Dark Mode · fixed</button>
+              <button type="button" data-theme-mode="light" aria-pressed="true">Light Mode · customizable</button>
+            </div>
+            <div class="pal-grid pal-lock">
+              <canvas id="wheel" tabindex="0" role="img" aria-label="360 degree colour wheel. Use arrow keys to change hue and saturation."></canvas>
+              <div>
+                <div class="chips" role="group" aria-label="Interface element">
+                  <button type="button" class="chip" data-el="accent">Accent</button>
+                  <button type="button" class="chip" data-el="bg">Background</button>
+                  <button type="button" class="chip" data-el="surface">Cards</button>
+                  <button type="button" class="chip" data-el="text">Text</button>
+                </div>
+                <div class="bright"><label for="bright"><span>Brightness</span><span id="hexout">#16B8D0</span></label><input type="range" id="bright" min="20" max="100" value="80"></div>
+              </div>
+            </div>
+            <div class="slots pal-lock" role="group" aria-label="Colour presets">
+              <button type="button" class="slot" data-slot="0" aria-pressed="true">Preset 1<small>Empty</small></button>
+              <button type="button" class="slot" data-slot="1" aria-pressed="false">Preset 2<small>Empty</small></button>
+              <button type="button" class="slot" data-slot="2" aria-pressed="false">Preset 3<small>Empty</small></button>
+            </div>
+            <div class="pal-actions pal-lock">
+              <button type="button" class="btn sm primary" id="save-preset">Save to preset</button>
+              <button type="button" class="btn sm" id="reset-preset">Reset preset</button>
+            </div>
+            <p class="pal-note">Custom colours apply to Light Mode. Dark Mode maintains its original high-contrast appearance. Save up to three presets and switch between them any time.</p>
+          </div>
+          <div class="tags" style="margin-top:1.2rem"><span class="pill ok">Available</span></div>
+        </div>
+        <div class="stage" data-stage="customization" role="img" aria-label="3D illustration of the LinkFlow apps on a PC and phone updating to your chosen colours"></div>
+      </div>
+    </article>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="sec" id="how">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="eyebrow"><i data-i="play"></i>How LinkFlow works</span>
+        <h2>Getting Started <span class="grad">Is Simple.</span></h2>
+        <p>Four steps from download to a connected phone and PC.</p>
+      </div>
+      <div class="steps">
+        <div class="step reveal">
+          <svg class="art" viewBox="0 0 200 110" aria-hidden="true"><rect class="dim" x="14" y="26" width="84" height="54" rx="6"/><path class="dim" d="M6 88h100"/><rect class="dim" x="140" y="24" width="34" height="64" rx="8"/><path class="stroke drop" d="M56 4v14m-6-6 6 6 6-6"/><path class="stroke drop" d="M157 2v14m-6-6 6 6 6-6" style="animation-delay:.4s"/></svg>
+          <span class="tag">Step 1</span><h3>Download</h3><p>Download LinkFlow for Windows and Android.</p>
+        </div>
+        <div class="step reveal d1">
+          <svg class="art" viewBox="0 0 200 110" aria-hidden="true"><rect class="stroke" x="14" y="22" width="84" height="54" rx="6"/><path class="stroke" d="M6 84h100"/><rect class="dim" x="28" y="46" width="56" height="7" rx="3.5"/><rect class="bar" x="28" y="46" width="56" height="7" rx="3.5" fill="#16B8D0"/><rect class="stroke" x="140" y="20" width="34" height="64" rx="8"/><rect class="dim" x="148" y="50" width="18" height="6" rx="3"/><rect class="bar" x="148" y="50" width="18" height="6" rx="3" fill="#16B8D0" style="animation-delay:.5s"/></svg>
+          <span class="tag">Step 2</span><h3>Install</h3><p>Install the application on both devices.</p>
+        </div>
+        <div class="step reveal d2">
+          <svg class="art" viewBox="0 0 200 110" aria-hidden="true"><rect class="stroke" x="14" y="22" width="84" height="54" rx="6"/><path class="stroke" d="M6 84h100"/><g class="stroke"><rect x="26" y="40" width="12" height="16" rx="3"/><rect x="42" y="40" width="12" height="16" rx="3"/><rect x="58" y="40" width="12" height="16" rx="3"/><rect x="74" y="40" width="12" height="16" rx="3"/></g><rect class="stroke" x="140" y="20" width="34" height="64" rx="8"/><g class="stroke pulse"><circle cx="150" cy="40" r="2"/><circle cx="157" cy="40" r="2"/><circle cx="164" cy="40" r="2"/></g><path class="flow" d="M104 48h30"/></svg>
+          <span class="tag">Step 3</span><h3>Pair</h3><p>Connect both devices by entering the 4-digit PIN shown on your PC.</p>
+        </div>
+        <div class="step reveal d3">
+          <svg class="art" viewBox="0 0 200 110" aria-hidden="true"><rect class="stroke fillc" x="14" y="22" width="84" height="54" rx="6"/><path class="stroke" d="M6 84h100"/><rect class="stroke fillc" x="140" y="20" width="34" height="64" rx="8"/><path class="flow" d="M104 48h30"/><circle class="pulse" cx="56" cy="49" r="13" fill="rgba(44,203,138,.18)" stroke="#2CCB8A" stroke-width="2"/><path d="M50 49l4 4 8-8" fill="none" stroke="#2CCB8A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span class="tag">Step 4</span><h3>Enjoy</h3><p>Start sharing files, syncing clipboard content, mirroring screens, and using other connected features.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PLATFORM SUPPORT -->
+  <section class="sec" id="support" style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="eyebrow"><i data-i="check"></i>Platform support</span>
+        <h2>What works today, <span class="grad">and what's next.</span></h2>
+      </div>
+      <div class="platforms reveal">
+        <div class="plat-card"><i data-i="windows"></i><div><b>Windows 10</b><span>Supported</span></div></div>
+        <div class="plat-card"><i data-i="windows"></i><div><b>Windows 11</b><span>Supported</span></div></div>
+        <div class="plat-card"><i data-i="android"></i><div><b>Android</b><span>Supported</span></div></div>
+      </div>
+      <div class="support reveal">
+        <div class="support-row"><i data-i="lock"></i><div><b>Device pairing</b><span class="d">4-digit PIN pairing, automatic reconnection</span></div><span class="pill ok">Available</span></div>
+        <div class="support-row"><i data-i="clip"></i><div><b>Clipboard sync</b><span class="d">Both directions</span></div><span class="pill ok">Available</span></div>
+        <div class="support-row"><i data-i="file"></i><div><b>File sharing</b><span class="d">PC to phone and phone to PC</span></div><span class="pill ok">Available</span></div>
+        <div class="support-row"><i data-i="camera"></i><div><b>Phone camera sharing</b><span class="d">Use the phone as a camera source on Windows</span></div><span class="pill ok">Available</span></div>
+        <div class="support-row"><i data-i="screen"></i><div><b>Screen sharing</b><span class="d">Phone to PC, PC to phone, phone as second screen</span></div><span class="pill ok">Available</span></div>
+        <div class="support-row"><i data-i="pad"></i><div><b>Phone as trackpad</b><span class="d">Cursor, click and scroll from your phone</span></div><span class="pill ok">Available</span></div>
+        <div class="support-row"><i data-i="palette"></i><div><b>Personalization</b><span class="d">Custom colours and three presets in Light Mode</span></div><span class="pill ok">Available</span></div>
+        <div class="support-row"><i data-i="gamepad"></i><div><b>Controller</b><span class="d">Virtual controller with haptics, gyro and eight layouts</span></div><span class="pill ok">Available</span></div>
+        <div class="support-row"><i data-i="type"></i><div><b>Autotype</b><span class="d">Type your text into any PC window, controlled from your phone</span></div><span class="pill ok">Available</span></div>
+        <div class="support-row"><i data-i="audio"></i><div><b>Audio routing</b><span class="d">Phone as speaker and PC as speaker</span></div><span class="pill ok">Available</span></div>
+        <div class="support-row dev"><i data-i="mic"></i><div><b>Phone as microphone</b><span class="d">Use the phone microphone on Windows</span></div><span class="pill dev">In Development</span></div>
+        <div class="support-row dev"><i data-i="usb"></i><div><b>USB mode</b><span class="d">Wired connection between phone and PC</span></div><span class="pill dev">In Development</span></div>
+      </div>
+      <p class="req reveal"><i data-i="info"></i><span>System requirements: <code>[to be announced]</code>. Minimum Windows and Android versions will be listed here once confirmed.</span></p>
+    </div>
+  </section>
+
+  <!-- DOWNLOAD -->
+  <section class="sec" id="download" style="padding-top:2rem">
+    <div class="wrap">
+      <div class="dl-hero">
+        <div class="reveal">
+          <span class="eyebrow"><i data-i="down"></i>Download</span>
+          <h2>Bring Your Devices <span class="grad">Together.</span></h2>
+          <p>Start using LinkFlow and experience a better connection between your Android phone and Windows PC.</p>
+        </div>
+        <div class="stage" data-stage="finale" role="img" aria-label="3D illustration of a Windows laptop and an Android phone connected"></div>
+      </div>
+      <div class="dl-cards one">
+        <div class="dl-card dl-one reveal">
+          <div class="badges"><div class="badge"><i data-i="windows"></i></div><div class="badge"><i data-i="android"></i></div></div>
+          <div>
+            <h3>LinkFlow for Windows &amp; Android</h3>
+            <p class="sub">Windows 10 / Windows 11 · Android</p>
+            <p class="note-line">One place for both apps. The button opens the LinkFlow project on GitHub, where the Windows installer and the Android APK are published.</p>
+          </div>
+          <a class="btn primary" data-dl href="#github"><i data-i="github"></i><span>Download from GitHub</span><i data-i="arrow"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GITHUB -->
+  <section class="sec" id="github" style="padding-top:0">
+    <div class="wrap">
+      <div class="gh reveal">
+        <div>
+          <span class="eyebrow"><i data-i="github"></i>GitHub</span>
+          <h2>Built to Connect. <span class="grad">Ready to Grow.</span></h2>
+          <p>Releases, version history and release notes will live on GitHub. <span data-oss hidden>The source code is open.</span></p>
+        </div>
+        <div class="gh-list">
+          <a class="gh-row" data-gh href="#github"><i data-i="github"></i><div><b>Repository</b><span class="v" data-gh-text>github.com/Adhirajkr/Linkflow</span></div></a>
+          <a class="gh-row" data-releases href="#github"><i data-i="note"></i><div><b>Releases &amp; release notes</b><span class="v">Versions and downloads live on GitHub</span></div></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="sec" id="faq" style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head reveal" style="margin-inline:auto;text-align:center">
+        <span class="eyebrow"><i data-i="info"></i>FAQ</span>
+        <h2>Questions, <span class="grad">answered.</span></h2>
+      </div>
+      <div class="faq">
+        <div class="faq-item reveal"><button class="faq-q" aria-expanded="false" aria-controls="a1" id="q1">What is LinkFlow?<i data-i="chevron"></i></button><div class="faq-a" id="a1" role="region" aria-labelledby="q1"><div><p>LinkFlow connects an Android phone and a Windows PC so you can share and control features between them: pairing, clipboard sync, file transfer, phone camera sharing, screen sharing, using your phone as a trackpad, and personalized colours.</p></div></div></div>
+        <div class="faq-item reveal"><button class="faq-q" aria-expanded="false" aria-controls="a2" id="q2">Which platforms does LinkFlow support?<i data-i="chevron"></i></button><div class="faq-a" id="a2" role="region" aria-labelledby="q2"><div><p>LinkFlow supports Windows 10, Windows 11 and Android.</p></div></div></div>
+        <div class="faq-item reveal"><button class="faq-q" aria-expanded="false" aria-controls="a3" id="q3">How do I connect my phone and PC?<i data-i="chevron"></i></button><div class="faq-a" id="a3" role="region" aria-labelledby="q3"><div><p>Install LinkFlow on both devices. Your PC shows a 4-digit PIN; enter it on your phone to pair. After the first pairing your devices reconnect automatically.</p></div></div></div>
+        <div class="faq-item reveal"><button class="faq-q" aria-expanded="false" aria-controls="a4" id="q4">Does LinkFlow support wireless connections?<i data-i="chevron"></i></button><div class="faq-a" id="a4" role="region" aria-labelledby="q4"><div><p>Yes. LinkFlow connects your phone and PC wirelessly. The phone-to-PC screen mirror uses wireless debugging (ADB over Wi-Fi) where required.</p></div></div></div>
+        <div class="faq-item reveal"><button class="faq-q" aria-expanded="false" aria-controls="a5" id="q5">Can I transfer files between devices?<i data-i="chevron"></i></button><div class="faq-a" id="a5" role="region" aria-labelledby="q5"><div><p>Yes. You can send files from your PC to your phone and from your phone to your PC, with a progress indicator while the transfer runs.</p></div></div></div>
+        <div class="faq-item reveal"><button class="faq-q" aria-expanded="false" aria-controls="a6" id="q6">Can I synchronize my clipboard?<i data-i="chevron"></i></button><div class="faq-a" id="a6" role="region" aria-labelledby="q6"><div><p>Yes. Clipboard synchronization works in both directions between your Android phone and your Windows PC.</p></div></div></div>
+        <div class="faq-item reveal"><button class="faq-q" aria-expanded="false" aria-controls="a7" id="q7">Can I use my phone as a second screen?<i data-i="chevron"></i></button><div class="faq-a" id="a7" role="region" aria-labelledby="q7"><div><p>Yes. Phone as Second Screen extends your Windows display onto your phone, so you can move windows from your main monitor to the phone. LinkFlow also offers phone-to-PC and PC-to-phone screen sharing.</p></div></div></div>
+        <div class="faq-item reveal"><button class="faq-q" aria-expanded="false" aria-controls="a8" id="q8">Can I use my phone as a trackpad?<i data-i="chevron"></i></button><div class="faq-a" id="a8" role="region" aria-labelledby="q8"><div><p>Yes. Your Android phone becomes a wireless trackpad for Windows, with cursor movement, clicking and scrolling.</p></div></div></div>
+        <div class="faq-item reveal"><button class="faq-q" aria-expanded="false" aria-controls="a9" id="q9">Does LinkFlow support USB connectivity?<i data-i="chevron"></i></button><div class="faq-a" id="a9" role="region" aria-labelledby="q9"><div><p>USB mode is still in development and isn't available yet.</p></div></div></div>
+        <div class="faq-item reveal"><button class="faq-q" aria-expanded="false" aria-controls="a10" id="q10">Are audio and microphone routing available?<i data-i="chevron"></i></button><div class="faq-a" id="a10" role="region" aria-labelledby="q10"><div><p>Partly. Phone as speaker and PC as speaker are available. Phone as microphone is still in development and isn't available yet.</p></div></div></div>
+        <div class="faq-item reveal"><button class="faq-q" aria-expanded="false" aria-controls="a13" id="q13">Can I use my phone as a game controller?<i data-i="chevron"></i></button><div class="faq-a" id="a13" role="region" aria-labelledby="q13"><div><p>Yes. The Controller feature turns your phone into a virtual controller with haptic feedback and gyro. It has presets for Xbox, PS5, racing, FPS, fighting games, keyboard and mouse, and media, plus a customise option for your own layout.</p></div></div></div>
+        <div class="faq-item reveal"><button class="faq-q" aria-expanded="false" aria-controls="a14" id="q14">What is Autotype?<i data-i="chevron"></i></button><div class="faq-a" id="a14" role="region" aria-labelledby="q14"><div><p>Autotype gives you a space to write text and then types it automatically into whichever window you choose on your PC. You can start, pause and stop it from your phone.</p></div></div></div>
+        <div class="faq-item reveal"><button class="faq-q" aria-expanded="false" aria-controls="a11" id="q11">Can I customize the appearance?<i data-i="chevron"></i></button><div class="faq-a" id="a11" role="region" aria-labelledby="q11"><div><p>Yes, in Light Mode. You can choose colours with a 360-degree colour wheel, adjust brightness, preview changes live and save up to three presets. Dark Mode keeps its original high-contrast appearance and can't be customized.</p></div></div></div>
+        <div class="faq-item reveal"><button class="faq-q" aria-expanded="false" aria-controls="a12" id="q12">Where can I download LinkFlow?<i data-i="chevron"></i></button><div class="faq-a" id="a12" role="region" aria-labelledby="q12"><div><p>Use the Download button in the Download section. It opens the LinkFlow project on GitHub, where the Windows and Android downloads are published.</p></div></div></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="#home"><svg aria-hidden="true"><use href="#logo-mark"/></svg>LinkFlow</a>
+        <p>Connect your Android phone and Windows PC to share files, sync your clipboard, mirror screens and more.</p>
+      </div>
+      <div><h4>Explore</h4><ul><li><a href="#home">Home</a></li><li><a href="#features">Features</a></li><li><a href="#how">How It Works</a></li><li><a href="#download">Download</a></li></ul></div>
+      <div><h4>Project</h4><ul><li><a data-gh href="#github">GitHub</a></li><li><a href="#faq">FAQ</a></li></ul></div>
+    </div>
+    <div class="foot-base"><span>© <span data-year>2026</span> LinkFlow</span><span data-tagline>Your Devices. Seamlessly Connected.</span></div>
+  </div>
+</footer>
+<script>/*JS*/</script>
